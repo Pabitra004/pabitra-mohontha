@@ -1,0 +1,96 @@
+@use "../abstracts/variables" as v;
+ 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  backdrop-filter: blur(14px);
+}
+ 
+.header-inner,
+.primary-navigation,
+.primary-navigation ul {
+  display: flex;
+  align-items: center;
+}
+ 
+.header-inner {
+  min-height: 78px;
+  justify-content: space-between;
+  gap: 24px;
+}
+ 
+.site-brand,
+.footer-brand {
+  color: v.$heading;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+ 
+.site-brand img {
+  width: auto;
+  max-height: 48px;
+}
+ 
+.primary-navigation {
+  gap: 24px;
+}
+ 
+.primary-navigation ul {
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.primary-navigation a {
+  color: v.$heading;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+ 
+.menu-toggle {
+  display: none;
+}
+ 
+@media (max-width: 850px) {
+  .menu-toggle {
+    display: grid;
+    gap: 5px;
+    border: 0;
+    background: transparent;
+    padding: 10px;
+  }
+ 
+  .menu-toggle span:not(.screen-reader-text) {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: v.$heading;
+  }
+ 
+  .primary-navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 22px;
+    background: #fff;
+    border-bottom: 1px solid v.$border;
+    align-items: stretch;
+    flex-direction: column;
+  }
+ 
+  .primary-navigation.is-open {
+    display: flex;
+  }
+ 
+  .primary-navigation ul {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

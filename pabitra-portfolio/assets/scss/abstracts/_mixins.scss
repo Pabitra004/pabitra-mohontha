@@ -1,0 +1,9 @@
+@mixin container {
+  width: min(100% - 40px, 1200px);
+  margin-inline: auto;
+}
+ 
+@mixin focus-ring {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}

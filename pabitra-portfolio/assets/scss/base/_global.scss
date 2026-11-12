@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+ 
+.container {
+  @include m.container;
+}
+ 
+.section {
+  padding-block: clamp(56px, 8vw, 112px);
+}
+ 
+.soft-section {
+  background: v.$soft-blue;
+}
+ 
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+ 
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+ 
+.eyebrow {
+  margin-bottom: 14px;
+  color: v.$primary;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+ 
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

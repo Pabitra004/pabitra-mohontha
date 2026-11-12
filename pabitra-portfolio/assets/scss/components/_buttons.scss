@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as v;
+ 
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid v.$primary;
+  border-radius: v.$radius-button;
+  background: v.$primary;
+  color: #fff;
+  font-weight: 700;
+  transition: transform v.$transition, background v.$transition, box-shadow v.$transition;
+}
+ 
+.button:hover {
+  background: v.$primary-dark;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.2);
+}
+ 
+.button-small {
+  min-height: 40px;
+  padding: 8px 16px;
+}
+ 
+.button-outline {
+  background: transparent;
+  color: v.$primary;
+}
+ 
+.button-outline:hover {
+  color: #fff;
+}

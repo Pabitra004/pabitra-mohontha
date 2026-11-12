@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as v;
+ 
+.site-footer {
+  padding-top: 48px;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+ 
+.site-footer a {
+  color: #fff;
+}
+ 
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: 32px;
+}
+ 
+.footer-inner p {
+  max-width: 480px;
+  margin-top: 14px;
+}
+ 
+.footer-social {
+  display: flex;
+  gap: 18px;
+}
+ 
+.footer-bottom {
+  padding-block: 18px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+}
+ 
+.footer-bottom p {
+  margin: 0;
+}
